@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+/*  CSS Reset                  */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: auto
+}
+
+:root {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  color: white;
+
+  --fw-light: 300;
+  --fw-med: 400;
+  --fw-bold: 500;
+
+  --clr-primary-blue: hsl(246, 80%, 60%);
+  --clr-primary-light-red-work: hsl(15, 100%, 70%);
+  --cr-primary-soft-blue-play: hsl(195, 74%, 62%);
+  --clr-primary-light-red-study: hsl(348, 100%, 68%);
+  --clr-primary-lime-green-exercise: hsl(145, 58%, 55%);
+  --clr-primary-violet-social: hsl(264, 64%, 52%);
+  --clr-primary-soft-orange-self-care: hsl(43, 84%, 65%);
+  --clr-neutral-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-neutral-dark-blue: hsl(235, 46%, 20%);
+  --clr-neutral-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-neutral-pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background-color: var(--clr-neutral-very-dark-blue);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+
+.profile-card {
+  background-image: linear-gradient(var(--clr-neutral-very-dark-blue), var(--clr-neutral-dark-blue));
+  border-radius: 0.6rem;
+}
+
+.profile {
+  background-color: var(--clr-primary-blue);
+  border-radius: 0.6rem;
+  padding: 3rem 1.5rem;
+}
+
+.profile img {
+  width: 5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.profile p {
+  font-weight: var(--fw-med);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile h1 {
+  font-weight: var(--fw-light);
+}
+
+.selector {
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem 1rem;
+  background-color: var(--clr-neutral-dark-blue);
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+
+button {
+  background: none;
+  color: var(--clr-neutral-pale-blue);
+  border: none;
+  text-align: left;
+  font-weight: var(--fw-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#daily {
+  color: white;
+}
+
+
+.hours-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 280.65px 280.65px;
+  grid-column: 2 / 3;
+  grid-row: 1 / span 2;
+  gap: 1rem;
+}
+
+.hours {
+  border-radius: 0.6rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  display: grid;
+  grid-template-rows: 2.5rem 1fr;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 2.5rem;
+  overflow-y: hidden;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+
+.icon img {
+  height: 3.8rem;
+  margin: -0.5rem 0;
+}
+
+#work {
+  background-color: var(--clr-primary-light-red-work);
+}
+
+#play {
+  background-color: var(--cr-primary-soft-blue-play);
+}
+
+#study {
+  background-color: var(--clr-primary-light-red-study);
+}
+
+#excercise {
+  background-color: var(--clr-primary-lime-green-exercise);
+}
+
+#social {
+  background-color: var(--clr-primary-violet-social);
+}
+
+#self-care {
+  background-color: var(--clr-primary-soft-orange-self-care);
+}
+
+#work,
+#playtext,
+#studytext {
+  grid-row: 1 / 2;
+}
+
+#excercise,
+#social,
+#self-care {
+  grid-row: 2 / 3;
+}
+
+.text {
+  background-color: var(--clr-neutral-dark-blue);
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.category h2 {
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+}
+
+.category img {
+  height: 0.3rem;
+  cursor: pointer;
+}
+
+.text {
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.text:hover {
+  background-color: hsla(235, 46%, 20%, 0.8);
+}
+
+.text h3 {
+  font-weight: var(--fw-light);
+  font-size: 4rem;
+}
+
+.data {
+  margin-left: 1.5rem;
+}
+
+.data div {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+  font-weight: var(--fw-light);
+  color: var(--clr-neutral-pale-blue);
+}
+
+.attribution {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--clr-primary-blue);
+}
+
+@media screen and (max-width:830px) {
+  body {
+    justify-content: flex-start;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  .profile {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .profile p {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  .profile h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .selector {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .selector button {
+    font-size: 1rem;
+  }
+
+  .hours-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category {
+    padding-bottom: 0;
+  }
+
+  .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .text h3 {
+    font-size: 1.5rem;
+  }
+
+  .attribution {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width:801px) {
+  main {
+    width: 95%;
+  }
+  .text h3 {
+    font-size: 3rem;
+  }  
+}
+
+@media screen and (min-width:1250px) {
+  main {
+    width: 80%;
+  }
+ .profile h1 {
+  font-size: 3.3rem;
+ }
+
+ .profile {
+  padding-bottom: 1.3rem;
+ }
+
+ .selector button {
+  font-size: 1rem;
+ }
+
+ .text h3 {
+  font-size: 4rem;
+ }
+
+ .text p {
+  font-size: 1.1rem;
+  margin-top: 0;
+ }
+
+
+
+}
+

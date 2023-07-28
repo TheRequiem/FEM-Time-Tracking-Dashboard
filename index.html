@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+
+</head>
+
+<body>
+  <main>
+    <div class="profile-card">
+      <div class="profile">
+        <img src="./images/image-jeremy.png" alt="Jeremy Robson">
+        <div class="profile-text">
+        <p>Report for</p>
+        <h1>Jeremy Robson</h1>
+      </div>
+      </div>
+      <div class="selector"><button id="daily">Daily</button><button id="weekly">Weekly</button><button id="monthly">Monthly</button></div>
+    </div>
+    <div class="hours-container">
+      <div id="work" class="hours">
+        <div class="icon"><img src="./images/icon-work.svg" alt=""></div>
+        <div class="text">
+          <div class="category">
+            <h2>Work</h2>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="data">
+            <h3 id="work-current">5hrs</h3>
+            <div><p class="type">Yesterday - </p><span id="work-prev">7hrs</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="play" class="hours">
+        <div class="icon"><img src="./images/icon-play.svg" alt=""></div>
+        <div class="text">
+          <div class="category">
+            <h2>Play</h2>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="data">
+            <h3 id="play-current">1hr</h3>
+            <div><p class="type">Yesterday - </p><span id="play-prev">2hrs</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="study" class="hours">
+        <div class="icon"><img src="./images/icon-study.svg" alt=""></div>
+        <div class="text">
+          <div class="category">
+            <h2>Study</h2>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="data">
+            <h3 id="study-current">0hrs</h3>
+            <div><p class="type">Yesterday - </p><span id="study-prev">1hr</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="excercise" class="hours">
+        <div class="icon"><img src="./images/icon-exercise.svg" alt=""></div>
+        <div class="text">
+          <div class="category">
+            <h2>Exercise</h2>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="data">
+            <h3 id="excercise-current">1hr</h3>
+            <div><p class="type">Yesterday - </p><span id="excercise-prev">1hr</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="social" class="hours">
+        <div class="icon"><img src="./images/icon-social.svg" alt=""></div>
+        <div class="text">
+          <div class="category">
+            <h2>Social</h2>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="data">
+            <h3 id="social-current">1hr</h3>
+            <div><p class="type">Yesterday - </p><span id="social-prev">3hrs</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="self-care" class="hours">
+        <div class="icon"><img src="./images/icon-self-care.svg" alt=""></div>
+        <div class="text">
+          <div class="category">
+            <h2>Self-Care</h2>
+            <img src="./images/icon-ellipsis.svg" alt="">
+          </div>
+          <div class="data">
+            <h3 id="self-care-current">0hrs</h3>
+            <div><p class="type">Yesterday - </p><span id="self-care-prev">1hr</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/TheRequiem">The Requiem</a>.
+  </footer>
+</body>
+
+</html>
