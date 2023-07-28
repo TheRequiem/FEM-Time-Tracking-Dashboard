@@ -1,4 +1,4 @@
-import data from "./data.json";
+import data from "./data.json" assert {type: 'json'};
 
 const dailyButton = document.getElementById('daily');
 const weeklyButton = document.getElementById('weekly');
